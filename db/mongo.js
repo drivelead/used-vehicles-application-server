@@ -8,7 +8,7 @@ const connectMongo = async () => {
       useUnifiedTopology: true,
     });
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
   }
 };
 
