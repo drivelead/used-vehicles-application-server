@@ -7,6 +7,13 @@ const ContactSchema = new mongoose.Schema(
     email: { type: String, required: true },
     phone: { type: String },
     message: { type: String },
+    dealerInformation: {
+      id: { type: String, required: true },
+      slug: { type: String, required: true },
+    },
+    customerInformation: {
+      locale: { type: String, default: "en" },
+    },
   },
   { timestamps: true }
 );

@@ -12,6 +12,7 @@ import { corOptions } from "./config/cors.js";
 import rootRouter from "./api/v1/routes/root.js";
 import contactRouter from "./api/v1/routes/contact.js";
 import sellYourVehicleRouter from "./api/v1/routes/sell-your-vehicle.js";
+import subscriberRouter from "./api/v1/routes/newsletter.js";
 
 import credentials from "./middlewares/credentials.js";
 import connectMongo from "./db/mongo.js";
@@ -44,6 +45,7 @@ app.get("/", (req, res) => {
 app.use("/api/v1/", rootRouter);
 app.use("/api/v1/contact", contactRouter);
 app.use("/api/v1/sell-your-vehicle", sellYourVehicleRouter);
+app.use("/api/v1/newsletter", subscriberRouter);
 
 // Listening to Database
 mongoose.connection.once("open", () => {

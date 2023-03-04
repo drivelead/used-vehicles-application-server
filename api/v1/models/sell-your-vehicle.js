@@ -24,6 +24,13 @@ const SellYourVehicleSchema = new mongoose.Schema(
       phone: { type: String },
       message: { type: String },
     },
+    dealerInformation: {
+      id: { type: String, required: true },
+      slug: { type: String, required: true },
+    },
+    customerInformation: {
+      locale: { type: String, default: "en" },
+    },
   },
   { timestamps: true }
 );

@@ -2,12 +2,17 @@ import SellYourVehicle from "../models/sell-your-vehicle.js";
 
 export const addSellYourVehicleInfo = async (req, res) => {
   const sellYourVehicleBody = req.body.data;
+  const information = req.body.information;
 
   try {
     // add tournament to db
-    const createdSellYourVehicle = await SellYourVehicle.create(
-      sellYourVehicleBody
-    );
+    const createdSellYourVehicle = await SellYourVehicle.create({
+      ...sellYourVehicleBody,
+      dealerInformation: information.dealerInformation,
+      customerInformation: {
+        locale: information.customerInformation.activeLocale,
+      },
+    });
 
     if (!createdSellYourVehicle) {
       return res.sendStatus(500);
