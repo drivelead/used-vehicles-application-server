@@ -52,7 +52,7 @@ mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB.");
 });
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3500;
 
 app.listen(PORT, () => console.log(`Server started on ${PORT}`));
 
