@@ -2,6 +2,8 @@ export const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
   "https://autolead.website",
+  "https://showroom.autolead.website",
+  "https://alainclass.showroom.autolead.website",
 ];
 
 export const corOptions = {
