@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const connectMongo = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://newuser1:DF8PDUbCA4fnMsrP@next-mern-stack.ze4uf.mongodb.net/autolead_vms?retryWrites=true&w=majority",
+      "mongodb+srv://autolead-used-showroom:bpcR0P3L9Wr0Apnv@autolead-used-showroom.pyut55l.mongodb.net/autolead_vms?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

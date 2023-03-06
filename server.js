@@ -6,14 +6,14 @@ import cookieParser from "cookie-parser";
 import { fileURLToPath } from "url";
 import path from "path";
 
-import { logger } from "./middlewares/logEvents.js";
-import { errorHandler } from "./middlewares/errorHandler.js";
-import { corOptions } from "./config/cors.js";
 import rootRouter from "./api/v1/routes/root.js";
 import contactRouter from "./api/v1/routes/contact.js";
 import sellYourVehicleRouter from "./api/v1/routes/sell-your-vehicle.js";
 import subscriberRouter from "./api/v1/routes/newsletter.js";
 
+import { logger } from "./middlewares/logEvents.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
+import { corOptions } from "./config/cors.js";
 import credentials from "./middlewares/credentials.js";
 import connectMongo from "./db/mongo.js";
 

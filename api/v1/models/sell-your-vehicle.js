@@ -6,6 +6,7 @@ const SellYourVehicleSchema = new mongoose.Schema(
       vehicleMake: { type: String },
       vehicleModel: { type: String },
       modelYear: { type: String },
+      askingPrice: { type: String },
       mileage: { type: String },
       vin: { type: String },
       exteriorColour: { type: String },
@@ -14,7 +15,7 @@ const SellYourVehicleSchema = new mongoose.Schema(
     },
     vehicleCondition: {
       exteriorCondition: { type: String },
-      enteriorCondition: { type: String },
+      interiorCondition: { type: String },
       accidentState: { type: String },
     },
     contactDetails: {
