@@ -23,7 +23,9 @@ export const ShowroomSchemaFields = {
   usedVehicles: [
     { id: { type: String }, addedAt: { type: Date, default: Date.now } },
   ],
-  blogArticles: [String],
+  blogArticles: [
+    { id: { type: String }, addedAt: { type: Date, default: Date.now } },
+  ],
 };
 
 const ShowroomSchema = new mongoose.Schema(ShowroomSchemaFields, {

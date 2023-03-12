@@ -8,7 +8,7 @@ export const BlogArticleSchemaFields = {
   publishedDate: { type: Date },
   featuredArticle: { type: Boolean, default: false },
   mainImage: { url: { type: String } },
-  showroom: { type: String },
+  showroom: { id: { type: String } },
 };
 
 const BlogArticleSchema = new mongoose.Schema(BlogArticleSchemaFields, {
