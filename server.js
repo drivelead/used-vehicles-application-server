@@ -10,6 +10,10 @@ import rootRouter from "./api/v1/routes/root.js";
 import contactRouter from "./api/v1/routes/contact.js";
 import sellYourVehicleRouter from "./api/v1/routes/sell-your-vehicle.js";
 import subscriberRouter from "./api/v1/routes/newsletter.js";
+import showroomRouter from "./api/v1/routes/showroom.js";
+import blogArticleRouter from "./api/v1/routes/blog-article.js";
+import usedVehicleRouter from "./api/v1/routes/used-vehicle.js";
+import vehicleBrandRouter from "./api/v1/routes/vehicle-brand.js";
 
 import { logger } from "./middlewares/logEvents.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
@@ -46,6 +50,10 @@ app.use("/api/v1/", rootRouter);
 app.use("/api/v1/contact", contactRouter);
 app.use("/api/v1/sell-your-vehicle", sellYourVehicleRouter);
 app.use("/api/v1/newsletter", subscriberRouter);
+app.use("/api/v1/showroom", showroomRouter);
+app.use("/api/v1/used-vehicle", usedVehicleRouter);
+app.use("/api/v1/vehicle-brand", vehicleBrandRouter);
+app.use("/api/v1/blog-article", blogArticleRouter);
 
 // Listening to Database
 mongoose.connection.once("open", () => {
