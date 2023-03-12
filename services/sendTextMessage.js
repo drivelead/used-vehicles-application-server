@@ -8,8 +8,9 @@ export const sendTextMessage = async (options) => {
       to: options.to,
     });
 
-    return { ...msgResponse, msgResponse: null };
+    return { ...msgResponse, errorSendingMessages: false };
   } catch (err) {
+    console.log(err);
     throw new Error(err);
   }
 };

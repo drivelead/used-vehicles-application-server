@@ -2,11 +2,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export default {
+const env = {
   MONGO_URI:
     process.env.NODE_ENV === "production"
       ? process.env.ATLAS_URI
-      : process.env.ATLAS_URI,
-  ACCESS_TOKEN_SECRET_KEY: process.env.ACCESS_TOKEN_SECRET_KEY,
-  REFRESH_TOKEN_SECRET_KEY: process.env.REFRESH_TOKEN_SECRET_KEY,
+      : process.env.LOCAL_MONGO_URI,
+  TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN,
+  TWILIO_ACCOUNT_SID: process.env.TWILIO_ACCOUNT_SID,
 };
+
+export default env;
