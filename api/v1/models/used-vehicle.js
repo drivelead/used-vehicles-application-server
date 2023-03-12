@@ -21,9 +21,11 @@ export const UsedVehicleSchemaFields = {
   description: { type: String },
   mainImage: { url: { type: String } },
   youTubeVideo: { type: String },
-  vehicleBrand: { type: String },
   imageGallery: [{ url: { type: String } }],
-  showroom: { type: String },
+  vehicleBrand: {
+    id: { type: String, required: true },
+  },
+  showroom: { id: { type: String } },
 };
 
 const UsedVehicleSchema = new mongoose.Schema(UsedVehicleSchemaFields, {

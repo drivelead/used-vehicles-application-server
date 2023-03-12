@@ -9,7 +9,9 @@ export const VehicleBrandSchemaFields = {
   logoMeaning: { type: String },
   featuredImage: { url: { type: String } },
   logoRef: { url: { type: String } },
-  usedVehicles: [String],
+  usedVehicles: [
+    { id: { type: String }, addedAt: { type: Date, default: Date.now } },
+  ],
 };
 
 const VehicleBrandSchema = new mongoose.Schema(VehicleBrandSchemaFields, {

@@ -20,7 +20,9 @@ export const ShowroomSchemaFields = {
   maximumPopularMakesOnHomepage: { type: String },
   maximumFeaturedVehiclesOnHomepage: { type: String },
   showroomDomainName: { type: String },
-  usedVehicles: [String],
+  usedVehicles: [
+    { id: { type: String }, addedAt: { type: Date, default: Date.now } },
+  ],
   blogArticles: [String],
 };
 
