@@ -5,7 +5,6 @@ export const addSellYourVehicleInfo = async (req, res) => {
   const information = req.body.information;
 
   try {
-    // add tournament to db
     const createdSellYourVehicle = await SellYourVehicle.create({
       ...sellYourVehicleBody,
       dealerInformation: information.dealerInformation,

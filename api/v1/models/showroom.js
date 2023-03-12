@@ -1,13 +1,11 @@
 import mongoose from "mongoose";
-import { UsedVehicleSchemaFields } from "./used-vehicle.js";
-import { BlogArticleSchemaFields } from "./blog-article.js";
 
 export const ShowroomSchemaFields = {
   showroomName: { type: String, required: true, unique: true },
   showroomSlug: { type: String, required: true, unique: true },
   showroomDescription: { type: String },
-  showroomLogo: { type: String },
-  showroomLogoDarkBG: { type: String },
+  showroomLogo: { url: { type: String } },
+  showroomLogoDarkBG: { url: { type: String } },
   showroomSignupDate: { type: Date },
   showroomServiceEndDate: { type: Date },
   showroomPrimaryColour: { hex: { type: String } },
@@ -22,8 +20,8 @@ export const ShowroomSchemaFields = {
   maximumPopularMakesOnHomepage: { type: String },
   maximumFeaturedVehiclesOnHomepage: { type: String },
   showroomDomainName: { type: String },
-  stockListings: [UsedVehicleSchemaFields],
-  blogArticles: [BlogArticleSchemaFields],
+  usedVehicles: [String],
+  blogArticles: [String],
 };
 
 const ShowroomSchema = new mongoose.Schema(ShowroomSchemaFields, {

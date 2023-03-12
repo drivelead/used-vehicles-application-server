@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { ShowroomSchemaFields } from "./showroom.js";
 
 export const BlogArticleSchemaFields = {
   title: { type: String, required: true },
@@ -9,7 +8,7 @@ export const BlogArticleSchemaFields = {
   publishedDate: { type: Date },
   featuredArticle: { type: Boolean, default: false },
   mainImage: { url: { type: String } },
-  showrooms: [ShowroomSchemaFields],
+  showroom: { type: String },
 };
 
 const BlogArticleSchema = new mongoose.Schema(BlogArticleSchemaFields, {

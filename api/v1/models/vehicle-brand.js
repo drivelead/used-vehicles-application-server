@@ -1,16 +1,15 @@
 import mongoose from "mongoose";
-import { UsedVehicleSchemaFields } from "./used-vehicle.js";
 
 export const VehicleBrandSchemaFields = {
   brandName: { type: String, required: true, unique: true },
   slug: { type: String, required: true, unique: true, lowercase: true },
-  founded: { type: String },
+  founded: { type: String | Number },
   brandWebsite: { type: String },
   brandHistory: { type: String },
   logoMeaning: { type: String },
   featuredImage: { url: { type: String } },
   logoRef: { url: { type: String } },
-  usedCars: [UsedVehicleSchemaFields],
+  usedVehicles: [String],
 };
 
 const VehicleBrandSchema = new mongoose.Schema(VehicleBrandSchemaFields, {

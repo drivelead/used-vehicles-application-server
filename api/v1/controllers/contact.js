@@ -7,7 +7,6 @@ export const addContactController = async (req, res) => {
   const information = req.body.information;
 
   try {
-    // add tournament to db
     const createdContact = await Contact.create({
       ...contactFormBody,
       dealerInformation: information.dealerInformation,

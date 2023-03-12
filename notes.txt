@@ -1,2 +1,4 @@
 http://localhost:3500/api/v1/newsletter/verify/<email>?verifyToken=<verifyToken>
 http://localhost:3000/newsletter/verify?email=<email>&verifyToken=<verifyToken>
+
+Text Editor Implementation
